@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daniel Mendes - Desenvolvimento de Sistemas">   
+    <meta name="keywords" content="programação, análise, html, css, sistemas"> 
+    <meta name="author" content="Daniel Mendes">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo1.png">
+    <style>
+        
+        .scroll-to {
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .scroll-to:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <title>Daniel Mendes.dev - Desenvolvimento de Software</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"></div>
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a class="scroll-to" href="#home">home</a></li>
+                    <li><a class="scroll-to" href="#servicos">serviços</a></li>
+                    <li><a class="scroll-to" href="#sobre">sobre</a></li>
+                    <li><a class="scroll-to" href="#contato">contato</a></li>
+                </ul>
+            </nav>
+            <nav class="mobile-menu">
+                <ul>
+                    <li><a class="scroll-to" href="#home">home</a></li>
+                    <li><a class="scroll-to" href="#servicos">serviços</a></li>
+                    <li><a class="scroll-to" href="#sobre">sobre</a></li>
+                    <li><a class="scroll-to" href="#contato">contato</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+            <div class="chamada1">
+                <h2><a name="home"></a>Programando códigos & <br/> ajudando pessoas.</h2>
+                <p>Analisando problemas, criando oportunidades, trazendo soluções.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="sessao1">
+        <div class="container">
+            <div class="texto-sessao1">
+                <h2><a name="servicos"></a>Desenvolvendo soluções para você</h2>
+                <p>Verifique nossos serviços:</p>
+                <ul>
+                    <li>Sites</li>
+                    <li>Análise de Dados</li>
+                    <li>Banco de Dados</li>
+                </ul>
+                <div class="clear"></div>
+                <div class="btn1-texto scroll-to" href="#contato">Entre em contato</div>
+            </div>
+            <div class="device-sessao1"></div>
+            <div class="clear"></div>
+        </div>
+    </section>
+
+    <section class="sessao2">
+        <div class="container">
+            <h2><a name="sobre"></a>Desenvolvido por pessoas e para pessoas</h2>
+            <p>Desenvolvimento é um processo que envolve as pessoas em todos os seus aspectos. É um processo que deve ser feito de forma personalizada e com o objetivo de beneficiar as pessoas.</p>
+            <img src="/img/mockup.png" alt="">
+        </div>
+    </section>
+
+    <section class="sessao3">
+        <div class="part1">
+            <div class="wraper-part1">
+                <h2>Skills</h2>
+                <p>Conhecimento nas principais linguagens de programação atualmente utilizadas no mercado. Projetos desenvolvidos em: Front End (HTML, CSS, JavaScript), Back end, Python, PHP, SQL, Power BI, Análise de Dados.</p>
+            </div>
+        </div>
+        <div class="part2">
+            <div class="sobre-autor">
+                <div class="titulo-autor">
+                    <div class="wraper-titulo-autor">
+                        <h2>Daniel Mendes</h2>
+                        <p>Analista de sistemas</p>
+                    </div>
+                    <div class="img-autor"></div>
+                </div>
+                <div class="texto-autor">
+                    <p>Sou formado em Sistemas de Informação, apaixonado pela programação e que descobri através dos códigos a oportunidade de criar soluções para ajudar pessoas.</p>
+                </div>
+            </div>
+            <div class="slider-bullets">
+                <span style="background-color:rgb(1, 0, 39);"></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    <section class="sessao4 contato">
+        <div class="container">
+            <div class="form">
+                <h2><a name="contato"></a>Entre em contato</h2>
+                <p>Para qualquer dúvida sobre os serviços ou processos de criação entre em contato conosco e venha fazer parte do próximo projeto!</p>
+                <form>
+                    <input type="text" name="nome" placeholder="Nome*">
+                    <input type="text" name="email" placeholder="E-mail*">
+                    <textarea name="mensagem" placeholder="Mensagem*"></textarea>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="container-map">
+            <h2>Faça uma visita:</h2>
+            <div id="map" class="map">
+                <div class="mapouter">
+                    <div class="map gmap_canvas">
+                        <iframe width="100%" height="480" id="gmap_canvas" src="https://maps.google.com/maps?q=Rua%20Tenente%20Luiz%20Ribeiro,%20352%20-%20Vila%20Domingos%20Lopes&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    <footer>
+        <div class="container"> 
+            <p>Todos os direitos reservados para DM Desenvolvimentos</p>
+            <p>Ano @2023</p>
+        </div>
+    </footer>
+</body>
+</html>

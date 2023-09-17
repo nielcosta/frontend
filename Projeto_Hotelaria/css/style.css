@@ -1,0 +1,321 @@
+/* Resetar a página*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;;
+}
+
+html,body{
+    height: 100%;
+}
+
+
+/* Divs Gerais*/
+.container{
+        width:100%;
+        max-width:1024px;
+        margin:0 auto;
+}
+
+.clear{
+    clear:both;
+}
+/******************************************** */
+header {
+    padding: 10px 2% 40px 2%;
+    background-color:#B8977A;
+   
+}
+.logo-1{
+    
+    float: left;
+    width: 150px;
+    height: 60px;
+    background-image: url("../imagens/logo1.png");
+    background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+.logo-2{    
+
+    float:right;
+    width: 160px;
+    height: 60px;
+    background-image: url("../imagens/logo2.png");
+    background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*  Formulário */
+
+section.cover-form{
+    width:100%;
+   
+
+}
+
+.bg{
+    position: relative;
+    height:560px;
+    background-position:center;
+    background-size:cover;
+    background-image: url("../imagens/bck-form.png");
+}
+
+.form-container{
+    position: absolute;
+    right: 30px;
+    top: -2.5%;
+    width: 400px;
+    height:105%;
+    
+    background-color: rgba(233, 223, 205,0.7);
+    box-shadow: 1px 1px 2px 1px rgb(97, 96, 96);
+
+}
+
+.form-container h2{
+    font-weight: normal;
+    padding:25px 15px;
+    color:rgb(104, 47, 47);
+    font-size: 18px;
+    background-color: rgb(211, 199, 178);
+}
+
+.form-container form{
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.form-container form p{
+    font-size: 14px;
+    color: rgb(63, 31, 31);
+}
+
+
+.form-container form input[type="text"]{
+    width: 100%;
+    border:1px solid #B8977A;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 10px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(117,117,117,1);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(117,117,117,1);
+	box-shadow: 2px 2px 5px 0px rgba(117,117,117,1);
+    
+ 
+}
+.form-wraper:not(:first-child){
+
+    margin-top: 40px;
+}
+
+.form-wraper:last-child{
+
+    margin-top: 20px;
+}
+
+
+.form-container form input[type="submit"]{
+    
+    color:white;
+    background-color: #301710;
+    text-transform: uppercase;
+	width: 100%;
+	font-size: 25px;
+	height: 50px;
+	cursor: pointer;
+	border:0;
+ 
+}
+
+.form-container form input[type="submit"]:hover{
+
+    background-color: #4b3030;
+}
+
+
+/*Seção Chamada */
+
+.chamada {
+    position: relative;
+    text-align: center;
+  }
+  
+  .icone-seta {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    width: 64px;
+    height: 64px;
+    background-size: 100% 100%;
+    background-image: url('../imagens/seta.png');
+  }
+  
+  @media (max-width: 768px) {
+    .icone-seta {
+      position: fixed;
+      top: 15px;
+      left:25px;
+    }
+  }
+
+section.chamada .container{
+    background-color: #4b3030;
+    padding: 70px 0 50px 0;
+
+}
+
+
+
+section.chamada h2{
+	width: 98%;
+	max-width: 700px;
+	display: inline-block;
+	color: white;
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+section.chamada p{
+	width: 98%;
+	max-width: 700px;
+	display: inline-block;
+	color: white;
+	margin-top:10px;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+/* Seção Mosaico */
+
+
+.flex-mosaico{
+
+    display: flex;
+}
+
+.item-1-msc{
+
+    background-position:center;
+    background-size:cover;
+    width:60%;
+    
+
+}
+
+.item-2-msc{
+    background-color: #e2cece;
+    padding:70px 40px;
+    width:40%;
+
+}
+
+
+.item-2-msc p{
+   color:rgb(58, 38, 38);
+
+
+}
+
+
+footer{
+
+    text-align: center;
+    padding: 20px auto;
+  
+}
+
+footer p{
+
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+footer img{
+    margin-top:10px;
+    width: 120px;
+}
+
+footer .container{
+
+    padding: 30px 0 50px 0;
+    background-color: #B8977A;
+}
+
+
+/*Designer Responsivo - Moisaico*/
+
+@media screen and (max-width: 960px) {
+    .bg{
+        height: auto;
+        padding: 40px 0;
+        text-align: center;
+
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .flex-mosaico{
+        display: block;
+    }
+    .item-1-msc{
+        padding-top:80%;
+        width: 100%;
+    }
+    .item-2-msc{
+        text-align: justify;
+        width: 100%;
+    }
+    
+
+
+}
+
+/*Designer Responsivo - Forumário */
+
+@media screen and (max-width: 960px) {
+    .bg{
+        height: auto;
+        padding: 40px 0;
+        text-align: center;
+
+    }
+    .form-container{
+        height: auto;
+        width: 96%;
+        max-width: 400px;
+        position: static;
+        display: inline-block;
+
+    }
+    .seta{
+        margin:25% 1%;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 510px){
+
+	header{
+		text-align: center;
+	}
+
+	[class^="logo"]{
+		margin-top:10px;
+		display: inline-block;
+		float: none;
+	}
+}

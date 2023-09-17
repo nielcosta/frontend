@@ -1,0 +1,369 @@
+/* Reset da Página em Modo Padrão*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Open Sans";
+
+}
+html,body{ height: 100%;}
+
+/* Setando a Fonte da Página */
+
+@font-face {
+    font-family:"Open Sans";
+    src: url("../fonts/OpenSans-Light.ttf");
+}
+
+.clear{
+	clear:both;
+}
+/* Estilo para centralizar elementos */
+
+.center{
+   max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    
+
+}
+/* Estilizando o cabeçario. */
+.header{
+    padding: 0 2%;
+    width:100%;
+    height: 90px;
+    background-color: rgb(34, 34, 34);
+
+}
+
+/* Estilizando a margem da Logo. */
+.header .logo{
+     margin:5px;
+}
+/* Estilizando o Banner */
+.container-banner{
+   
+    width: 100%;
+    padding: 0 2%;
+    height: 557px;
+    background-image: url(../img/header_bg.jpg);
+    background-size: cover;
+    background-position: center;
+  
+   
+}
+/* Centralizando o Banner */
+.container-banner > .center{
+       height: 100%;   
+     
+    
+}
+
+/* Estilizando a superficie do Formulário.  */
+.form{
+    padding: 20px;
+    width: 400px;
+    height:calc(100% + 30px);
+    position: relative;
+    top: -15px;
+    float: right;
+
+    /* Efeito borda transparente do Formulário
+    
+     background-origin: segue o mesmo conceito porém com imagens .
+    
+    */
+    
+    border: 8px solid rgba(120,120,120,0.5);
+    border-style: solid;
+    background-color: white;
+    background-clip: padding-box;
+    
+}
+
+/* Estilizando Título H2 do Formulário.  */
+
+.form >h2{
+    font-weight:normal;
+    font-size: 21px;
+    color: #999999;
+ }
+
+ /* Estilizando Espaçamento de Formulário e Aviso  */
+
+ .input-container,.form .aviso{
+    
+    margin: 20px 0;
+   
+ }
+
+  /* Estilizando Fonte de Formulário e Aviso  */
+ .input-container span, .form .aviso{
+
+    display: inline-block;
+    width: 100%;
+    font-size: 17px;
+    color: #BBBBBB;    
+    font-weight: bold;
+ }
+
+  /* Estilizando Input de Formulário */
+
+ .input-container input[type="text"]{
+    margin-top: 8px;
+    margin-left: 5px;
+    width: 344px;
+    height: 55px;
+    border:1px solid #ccc;
+
+ }
+
+   /* Estilizando o Botão do  Formulário */
+
+ .form input[type="submit"]{
+    width: 280px;
+    height: 56px;
+    font-size:20px;
+    background-color: rgb(39, 1, 1);
+    color:white;
+    display:inline-block;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 5px solid rgb(12, 1, 1);
+    cursor: pointer;
+    
+ }
+
+    /* Estilizando Efeito do Botão do Formulário ao passar o Mouse sobre ele.  */
+
+ .form input[type="submit"]:hover{
+   background-color: rgb(97, 7, 7);
+    
+ }
+
+ /* Estilizando o alinhamento do Botão do Formulário (Centralizado).  */
+
+ .form .input_submit_container{
+    
+    text-align: center;
+ }
+
+  /* Estilizando o quadro vermelho de Avisos do Banner  */
+ .container-list{
+    margin-top: 40px;
+    float: left;
+    width: 619px;
+    height: 270px;
+    background-color: rgba(97,7,7,0.8);
+ }
+
+ 
+  /* Estilizando a posição da lista de conteúdo do Quadro vermelho de Avisos do Banner  */
+
+ .container-list ul {
+    padding: 20px;
+    margin-left: 12px;
+    list-style-position: inside;
+
+ }
+
+  /* Estilizando a lista de conteúdo do Quadro vermelho de Avisos do Banner  */
+ .container-list ul li{
+    color:white;
+    margin-top: 20px;
+
+ }
+
+ /* Estilizando o Container 2 */
+
+ .container2{
+    
+    padding: 40px 2%;
+    background-color: orange;
+    text-align: center;
+    
+
+ }
+
+  /* Estilizando o Título da Sessão 2 */
+
+ .container2 h2{
+    
+   
+    text-align: center;
+    font-weight: bold;
+
+ }
+
+  /* Estilizando o Parágrafo da Sessão 2 */
+ 
+  .container2 p{
+      width: 100%;
+      max-width: 768px;
+      margin: 15px 0;
+      display: inline-block;
+      text-align: justify;
+      
+ }
+
+   /* Estilizando a figura de Check */
+ .arrow{
+
+    width: 64px;
+    height:64px;
+    background-image: url('../img/arrow.png');
+      /* background-size: 100% 100%; Caso queira diminuir a imagem na altura e na largura */
+
+    position: relative;
+    top: 60px;
+    margin: 0 auto;
+ }
+
+
+ 
+   /* Estilizando Inicio da Sessão 1 */
+ .section-1{
+    background-color:rgb(216, 214, 214);
+    padding:90px 2%; 
+
+
+ }
+ 
+ .section-1  h2{
+
+    text-align: center;
+    font-weight: bold;
+    color: rgb(66, 3, 3);
+}
+
+   /* Estilizando Alinhamento do Texto no Inicio da Sessão 1 */
+.container-section{
+
+    margin-top: 40px;
+    text-align: center;
+    
+}
+
+
+  /* Estilizando os Módulos da Secao1 */
+.modulo{
+
+    float:left;
+    width: 33.33%;
+    padding: 30px;
+
+}
+
+ /* Estilizando o Icone de cada módulo da Secao1 */
+.modulo img{
+
+    width: 70px;
+}
+
+ /* Estilizando texto de cada módulo da Secao1 */
+.modulo p{
+    display: inline-block;
+    padding: 10px 25px;
+    text-align: justify;
+}
+
+ /* Estilizando Rodapé*/
+
+ .rodape{
+   border-top: 4px solid #888888;
+   padding: 20px 0;
+   text-align: center;
+   color: #242323;
+ }
+
+ .rodape p{
+
+   margin-top: 8px;
+ }
+
+ @media screen and (max-width: 1024px){
+	.header{
+		height: auto;
+		width: 100%;
+		padding:15px 0;
+		text-align: center;
+	}
+
+	.header img{
+      width: 17%;
+      height: 17%;
+		margin:0;
+	}
+
+	.container-list{
+		padding:30px 0;
+		width: 40%;
+		float: left;
+		display: inline-block;
+		max-width: 500px;
+		height: auto;
+	}
+
+	.container-banner{
+		width: 100%;
+		padding:40px 2%;
+		height: auto;
+		text-align: center;
+	}
+
+	.form{
+		max-width: 400px;
+		padding:10px;
+		width: 60%;
+		height: 100%;
+		float:right;
+		top:0;
+	}
+
+	.input-container input[type=text]{
+		width: 100%;
+		height: 55px;
+	}
+
+   .input-container input[type=text]:focus{
+         outline: 0;
+         padding: 8px 10px 8px 10px;
+
+	}
+
+	.form input[type=submit]{
+		max-width: 280px;
+		height: 56px;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.container2{
+		padding-right: 4%;
+		padding-left: 4%;
+	}
+	.container-list{
+		margin-top: 0;
+		float: none;
+		display: inline-block;
+		width: 100%;
+	}
+
+	.form{
+		float: none;
+		display: inline-block;
+		width: 90%;
+		margin-top:30px;
+	}
+
+	.modulo{
+		float: none;
+		display: inline-block;
+		width: 100%;
+		max-width: 600px;
+		padding:30px 0;
+	}
+}
