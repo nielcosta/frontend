@@ -1,0 +1,467 @@
+/*Reset da Pagina ---------------------------------------------------------------------------------*/
+
+*{
+    margin:0;
+    padding: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    
+
+
+}
+
+
+
+
+.clear{clear: both;}
+
+/* Cabeçalho ---------------------------------------------------------------------------------------*/
+
+
+.cabecalho{
+    margin-top:1% ;
+    width:100%;
+    height: 100px;
+    display: inline-block;
+    
+}
+
+.logo{
+    margin:2% 4%;
+    float: left;
+    width: 220px;
+    height: 100px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+ 
+}
+
+.mdesktop{
+    margin-top: 3%;
+    width: 25%;
+    float:right;
+
+}
+
+.mdesktop ul{
+    
+    float:left;
+}
+
+.mdesktop li{
+    display: inline-block;
+    margin-left: 10px;
+   
+}
+.mdesktop a{
+
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(17, 17, 56);
+    font-family: 'Lato', sans-serif;
+    transition: all 0.3s ease;
+    
+}
+.mdesktop a:hover{
+
+    font-size: 18px;
+    font-weight: bold;
+    
+
+}
+
+.mmobile{
+    display: none;
+    margin-top: 2%;
+    float:right;
+    width: 45px;
+    height: 45px;
+    background-image: url('../img/menu.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mmobile {
+    display:none;
+}
+.mmobile ul {
+    
+    display:none;
+    width: 100%;
+    height: 600px;
+    background-color:rgb(17, 17, 56);
+    position: absolute;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 13% auto;
+    left: 0%;
+    text-align: center;
+     
+}
+
+.mmobile .close {
+    
+    margin:5px 15px;
+    display: flex;
+    float:right;
+    
+}
+
+.mmobile li {
+    
+    margin-top: 60px;
+    
+}
+
+.mmobile a {
+    
+    font-size: 30px;
+    text-decoration: none;
+    color: #eff1f1;
+    
+}
+
+
+
+/*Sobre------------------------------------------------------------------------------------*/
+
+.Sobre{
+    width: 100%;
+    height: 600px;
+   /* background-color: #2b3142;*/
+    display: flex;
+    
+}
+
+.imagem{
+   
+    padding: 2% 2%;
+    float: left;
+    width:50%;
+    height: 400px;
+    background-image: url('../img/estudantejpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 20px;
+
+
+}
+
+.csobre{
+
+    float: left;
+    width: 43%;
+    height: 400px;
+   /* background-color: cornflowerblue;*/
+    
+   
+}
+
+/*Texto 1 ----------------------------------------------------------------------------------------------*/
+
+.Texto1{
+   margin-top: 20px;
+   text-align: justify;
+
+}
+
+.Texto1 h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Texto1 p{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: normal;
+
+}
+
+/*Texto 2 ----------------------------------------------------------------------------------------------*/
+
+.Texto2{
+
+    margin-bottom: 20px;
+}
+
+.Texto2 h3{
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Texto2 ol{
+
+    text-decoration:wavy;
+}
+
+/*Texto 3 ----------------------------------------------------------------------------------------------*/
+
+.Texto3{
+
+    float: left;
+    width: 100%;
+    padding: 30px 2%;
+
+}
+.Texto3 h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+}
+
+.linha {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+  }
+
+.Texto3 p{
+
+    text-align: justify;
+    font-size: 16px;
+    font-weight: normal;
+    margin-right: 5%;
+}
+
+
+/*Rodape------------------------------------------------------------------------------------*/
+
+.controdape{
+    
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(to right,rgb(44, 51, 75), #2b3142);
+    text-align: center;
+
+}
+
+.controdape p{
+
+
+    font-size: 16px;
+    color: white;
+   
+}
+
+/*Java Script Recurso -------------------------------------------------------------------*/
+.open{
+    display: block;
+}
+
+
+/*Responsivo ---------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1004px) {
+    
+    .mdesktop{ 
+        margin-top:3%;
+     
+    
+    }
+    .container{
+        width: 100%;
+        height: 500px;
+        padding: 20px 12%;
+     
+    }
+
+    .imagem{
+
+            width: 50%;
+            display: flex;
+            float: left;
+            background-size: cover;
+            
+        }
+
+    .Texto3 {
+        margin-top:20px;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 200px;
+    }
+
+  .controdape{
+
+    margin-top: 5%;
+  }
+    
+}
+
+
+@media screen and (max-width:924px) {
+
+    .imagem{
+
+        width: 50%;
+        height: 400px;
+        display: flex;
+        float: left;
+        background-size: cover;
+        
+    }
+}    
+
+@media screen and (max-width:904px) {
+       
+    .texto{
+       padding:0 2%;}
+
+       .controdape{
+
+        margin-top: 25%;
+      }
+    
+
+      .Texto3 {
+        margin-top:10px;
+        width: 50%;
+        height: 300px;
+        margin-bottom: 50px;
+    }
+
+
+    
+}
+
+@media screen and (max-width:854px) {
+
+    .imagem{
+
+        width: 50%;
+        height: 300px;
+        display: flex;
+        float: left;
+        background-size: cover;
+        
+    }
+}    
+
+
+@media screen and (max-width:761px) {
+    
+    .mmobile {
+        margin: 2% 2%;
+        display:block;
+    }
+    
+    .mmobile ul {
+    
+        display:none;
+    }
+        
+    .container-sobre{
+        width: 100%;
+        height: 800px;
+       
+             
+    }
+    
+    .btexto {
+        
+        margin:0 2%;
+       
+     }  
+
+ 
+    .controdape{
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+    
+    }
+
+
+    .controdape p{
+
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 5px
+     
+       
+    }
+    .mdesktop{
+        margin-top: -35%;
+        width: 25%;
+        float:right;
+    
+    }
+
+
+.Sobre{
+
+    display: block;
+    padding: 2px 3px;
+    width: 100%;
+    height:900px;
+   
+}    
+.imagem{
+
+    display: flex;
+    width: 100%;
+    height: 400 ;
+    background-size: cover;
+    padding: 2px 3px;
+}
+
+.csobre{
+    padding: 2px 3px;
+    display: block;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+    
+
+}
+
+.Texto3{
+    margin-top: 100px;
+    display: block;
+    width: 100%;
+    height: 300px;
+  
+    
+
+}
+.controdape {
+
+   margin-top:400px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 60px ;
+
+
+}
+
+.controdape p {
+
+    text-align: center;
+    margin-bottom: 10px;
+ 
+ 
+ }
+
+
+
+}

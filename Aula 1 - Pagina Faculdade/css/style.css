@@ -1,0 +1,307 @@
+/*Reset da Pagina ---------------------------------------------------------------------------------*/
+
+*{
+    margin:0;
+    padding: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    
+
+
+}
+
+
+
+
+.clear{clear: both;}
+
+/* Cabeçalho ---------------------------------------------------------------------------------------*/
+
+
+.cabecalho{
+    margin-top:1% ;
+    width:100%;
+    height: 100px;
+    
+}
+
+.logo{
+    margin:2% 4%;
+    float: left;
+    width: 220px;
+    height: 100px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+ 
+}
+
+.mdesktop{
+    margin-top: 3%;
+    width: 25%;
+    float:right;
+
+}
+
+.mdesktop ul{
+    
+    float:left;
+}
+
+.mdesktop li{
+    display: inline-block;
+    margin-left: 10px;
+   
+}
+.mdesktop a{
+
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(17, 17, 56);
+    font-family: 'Lato', sans-serif;
+    transition: all 0.3s ease;
+    
+}
+.mdesktop a:hover{
+
+    font-size: 18px;
+    font-weight: bold;
+    
+
+}
+
+.mmobile{
+    display: none;
+    margin-top: 2%;
+    float:right;
+    width: 45px;
+    height: 45px;
+    background-image: url('../img/menu.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mmobile {
+    display:none;
+}
+.mmobile ul {
+    
+    display:none;
+    width: 100%;
+    height: 600px;
+    background-color:rgb(17, 17, 56);
+    position: absolute;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 13% auto;
+    left: 0%;
+    text-align: center;
+     
+}
+
+.mmobile .close {
+    
+    margin:5px 15px;
+    display: flex;
+    float:right;
+    
+}
+
+.mmobile li {
+    
+    margin-top: 60px;
+    
+}
+
+.mmobile a {
+    
+    font-size: 30px;
+    text-decoration: none;
+    color: #eff1f1;
+    
+}
+
+
+
+
+
+/*Banner ------------------------------------------------------------------------------------*/
+
+section .container-banner{
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(to right,rgb(233, 229, 229), #eff1f1);
+}
+
+section .img_banner{
+        
+        width: 100%;
+        height: 400px;
+        background-image: url('../img/capa.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+               
+      }
+
+     .btexto {
+        width: 200px;
+        height: 400px;
+        margin:0 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+     }   
+      
+     .btexto p {
+        padding:30px 2%;
+        font-size: 24px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        background-image: linear-gradient(to right,rgb(44, 51, 75), #2b3142);
+        border-radius: 10px;
+       
+        
+      }
+
+  
+
+/*Sobre------------------------------------------------------------------------------------*/
+
+.container{
+    width: 100%;
+    height: 350px;
+    padding: 20px 12%;
+ 
+}
+
+.container h2{
+    font-size: 20px;
+    color: #2b3142;
+    font-weight: 700;
+ 
+}
+.container p{
+    margin-top: 20px;
+    font-size: 16px;
+    color: #2c2d2e;
+    font-weight: normal;
+    text-align: justify;
+ 
+}
+
+/*Rodape------------------------------------------------------------------------------------*/
+
+.controdape{
+    
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(to right,rgb(44, 51, 75), #2b3142);
+    text-align: center;
+
+}
+
+.controdape p{
+
+
+    font-size: 16px;
+    color: white;
+   
+}
+
+/*Java Script Recurso -------------------------------------------------------------------*/
+.open{
+    display: block;
+}
+
+
+/*Responsivo ---------------------------------------------------*/
+
+@media screen and (max-width: 990px) {
+    
+    .mdesktop{ 
+        margin-top:3%;
+     
+    
+    }
+    .container{
+        width: 100%;
+        height: 500px;
+        padding: 20px 12%;
+     
+    }
+    
+}
+
+
+    
+
+
+@media screen and (max-width: 667px) {
+    
+    .mmobile {
+        margin: 2% 2%;
+        display:block;
+    }
+    
+    .mmobile ul {
+    
+        display:none;
+    }
+        
+    .container{
+        width: 100%;
+        height: 800px;
+        padding: 20px 12%;
+     
+    }
+    
+    .btexto {
+        
+        margin:0 2%;
+       
+     }  
+
+
+    
+}
+
+@media screen and (max-width: 667px) {
+
+    .container{
+        width: 100%;
+        height:100%;
+        padding: 20px 12%;
+     
+    }
+    .controdape{
+    
+        width: 100%;
+        height: 60px;
+        background-image: linear-gradient(to right,rgb(44, 51, 75), #2b3142);
+        text-align: center;
+    
+    }
+
+
+    .controdape p{
+
+
+        font-size: 12px;
+     
+       
+    }
+    .mdesktop{
+        margin-top: -35%;
+        width: 25%;
+        float:right;
+    
+    }
+
+
+
+
+}
