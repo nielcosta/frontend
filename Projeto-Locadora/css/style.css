@@ -1,0 +1,777 @@
+/*Reset da Página */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+
+}
+
+html,body{
+
+    height: 100%;
+}
+
+/*Movimento de Scrool do Link para Ancora*/
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  :target {
+    scroll-margin-top: .8em;
+  }
+
+
+
+.clear{ clear: both;}
+
+/*Cabeçario ---------------------------------------------------------------------------------------------------*/
+
+header{
+
+    padding: 20px 2% 35px 2%;
+    height: 130px;
+}
+
+.container{
+    width: 90%;
+    max-width: 1280px;
+    margin: 10px auto;
+  
+    
+}
+
+.logo {
+    float: left;
+}
+
+header nav.desktop{
+    float:right;
+    position: relative;
+    top:30px;
+
+}
+
+header nav.desktop ul{
+  
+    display: flex;
+    list-style-type: none;
+}
+
+header nav.desktop ul li{
+    float:left; 
+    margin-left: 20px;
+    font-size: 20px;
+    padding: 0 40px;
+
+}
+
+header nav .ahome{
+    font-style: italic;
+    color:orangered;
+}
+
+header nav.desktop ul a{
+   text-decoration: none;
+   font-style: italic;
+   color:rgb(24, 24, 24);
+
+}
+
+
+header nav.desktop ul a:hover{
+color: rgb(255, 30, 0);
+
+}
+
+
+
+/*Mobile --------------------------------------------------------------------------------------------------*/
+
+.mmobile{
+    display: none;
+    padding: 2% 3%;
+    float:right;
+    width: 45px;
+    height: 45px;
+    background-image: url('../img/menu.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mmobile {
+    display:none;
+}
+.mmobile ul {
+    
+    display:none;
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(45deg, orangered, darkred);
+    position: absolute;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 13% auto;
+    left: 0%;
+    text-align: center;
+    z-index: 9999;
+     
+}
+
+.mmobile .close {
+    
+    margin:5px 15px;
+    display: flex;
+    float:right;
+    
+}
+
+.mmobile li {
+    
+    margin-top: 60px;
+    
+}
+
+.mmobile a {
+    
+    font-size: 30px;
+    text-decoration: none;
+    color: #eff1f1;
+    transition: ease-in 0.3s;
+    
+}
+
+.mmobile a:hover{
+    font-size: 32px;
+    color:yellow;
+
+}
+
+
+
+
+
+/*Banner ---------------------------------------------------------------------------------------------------*/
+
+section.banner{
+
+    width: 100%;
+    height: 60vw;
+    min-height: 300px;
+    max-height: 400px;
+    background-color: brown;
+    background-image: url('../img/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.7);
+}
+
+.text-banner{
+    padding:100px;
+    display: flex;
+    float: right;
+    margin-right: 10%;
+}
+
+.text-banner-single{
+
+    width: 200px; /* Largura do retângulo */
+    height: 50px; /* Altura do retângulo */
+    background-image: linear-gradient(45deg, orangered, darkred);
+    transform: skew(-30deg); /* Inclinação de 30 graus */
+    margin-top: -60px;
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transition: ease-in 0.3s;
+    cursor: pointer;
+}
+
+.text-banner-single:last-child{
+    margin-bottom: 5px;
+
+}
+
+.text-banner-single:hover{
+    font-size: 30px; /* Aumenta o tamanho da fonte ao passar o mouse */
+    color: yellow; /* Troca a cor para amarelo ao passar o mouse */
+
+}
+
+
+
+.text-banner-single a{
+    font-size: 26px;
+    font-weight: normal;
+    font-style: normal;
+   
+ 
+
+}
+
+/*Veículos em Destaque  -------------------------------------------------------------------*/
+
+.veiculos-destaque{
+   
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+         
+}
+
+.bandeiras{
+   
+    width: 120px;
+    height: 100px;
+    background-image:url('../img/bandeiras.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+   
+}
+
+.linha{
+        width: 400px;
+        height: 20px;
+        border-bottom: 1px solid black;
+      }
+
+
+
+.veiculos-destaque > h2{
+    margin-top: -20px;
+    width: 260px;
+    height:30px;
+    background-color: rgb(250, 247, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*Vitrine de Carros -----------------------------------------------------------------------------------------*/
+
+
+.container-vitrine{
+    max-width: 900px;
+    display: flex;
+}
+
+.vitrine-destaque{
+    padding: 90px 2%;
+
+
+}
+.carro{
+    width: 33,3%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/*Imagem dos Carros ------------------------------------------------------------------------------------*/
+.car1{background-image:url('/img/carro1.jpeg');}
+.car2{background-image:url('/img/carro2.jpeg');}
+.car3{background-image:url('/img/carro3.jpeg');}
+
+
+/*Informação dos Carros ---------------------------------------------------------------------------------*/
+.info-carro{
+
+    text-align: center;
+
+}
+
+
+.info-carro a{
+
+    text-decoration: none;
+    padding:20px 50px;
+    background-image: linear-gradient(45deg, orangered, darkred);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: ease-in 0.5s;
+  
+}
+
+.info-carro a:hover{
+    color: rgb(212, 200, 30);
+
+}
+
+/*--Seção Serviços e Descrição----------------------------------------------------------------------------------->*/
+.servicos_desc{
+
+    width: 100%;
+    height:300px;
+    display: flex;
+
+}
+
+.servicos_desc .parte1{
+
+    width:50%;
+    height:300px;
+    padding:2% 15%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: rgb(29, 28, 28);
+    color: white;
+       
+    
+}
+
+.parte1 h2{
+    font-size: 23px;
+    font-weight: 400;
+    color:white;
+
+    
+}
+.parte1 ul li{
+     list-style-type: none;
+     margin-bottom: 5px;
+}
+
+.parte1 ul{
+      margin-bottom: 15px;
+}
+
+.parte1 a{
+    
+    padding: 5px 40px; 
+    text-decoration: none;
+    background-image: linear-gradient(45deg, orangered, darkred);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: ease-in 0.5s;
+}
+
+.parte1 a:hover{
+
+    color: yellow;
+}
+
+.parte1 .bandeiras {
+        margin-top: -30px;
+        filter: grayscale(100%) invert(100%);
+        color: aliceblue;
+        opacity: 0.6;
+
+}
+/*Parte 2 ------------------------------------------------------------------------------*/
+
+.servicos_desc .parte2{
+
+    width:50%;
+    height:300px;
+    padding:2% 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-image: linear-gradient(45deg, orangered, darkred);
+    color: white;
+       
+    
+}
+
+.parte2 h2{
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: 400;
+    color:whitesmoke;
+    margin-bottom: 20px;
+    
+}
+
+ .parte2 p{
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+    color:whitesmoke;
+    
+}
+
+/*Contato -----------------------------------------------------------------------------------------------------*/
+
+
+.contato{
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+          
+ }
+   
+ .contato > h2{
+     margin-top: -20px;
+     width: 260px;
+     height:30px;
+     background-color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+ }
+
+ .contato form{
+    max-width: 600px;
+    margin: 50px auto;
+    
+ }
+
+ .contato .input-dados{
+    float:left;
+    padding: 10px;
+    margin-top: 7px;
+
+
+ }
+
+ .contato input[type=text]{
+
+    width: 100%;
+    border:1px solid #ccc;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+
+ }
+
+ .w100{
+
+    width: 100%;
+
+ }
+
+ .w100 textarea{
+
+    width: 100%;
+    height:150px;
+    float:left;
+    padding: 10px;
+    margin-top: 7px;
+    resize: none;
+    border:1px solid #ccc;
+    line-height: 40px;
+    padding-left: 15px;
+
+ }
+
+ .w50{
+
+    width: 50%;
+    
+ }
+
+ .botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+ }
+
+ .botao input[type=submit]{
+        
+        text-align: center;
+        padding: 10px 50px; 
+        text-decoration: none;
+        background-image: linear-gradient(45deg, orangered, darkred);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        color: white;
+        transition: ease-in 0.5s;
+   
+  
+}
+
+/*Rodapé ----------------------------------------------------------------------------------------------------------*/
+footer{ 
+    padding: 40px 2%;
+    background-color: #252525;
+ 
+}
+
+footer nav{
+
+    float: left;
+
+}
+
+footer nav li{
+
+    display: inline-block;
+    margin-left: 15px;
+    list-style: none;
+    
+
+}
+
+footer nav a {
+
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: normal;
+  color:bisque;
+  opacity: 0.7;  
+
+}
+
+
+footer p {
+
+    font-size: 12px;
+    font-weight: normal;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:bisque;
+    opacity: 0.7;
+      
+  
+  }
+
+
+footer p{
+
+    float: right;
+}
+
+
+
+/*Java Script Recurso -------------------------------------------------------------------*/
+.open{
+    display: block;
+}
+
+
+
+
+
+
+
+/*Responsivo -------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width:845px){
+
+    header nav.desktop{
+        float:right;
+        position: relative;
+        top:-50px;
+    
+    }
+
+    .container-vitrine{
+       margin-bottom: 50px;
+    
+    
+    }
+
+}
+
+
+@media screen and (max-width: 796px){
+
+   .container{
+
+    margin-left: 30px;
+   }
+
+   
+.servicos_desc .parte1{
+
+    width:50%;
+    height:300px;
+    padding:2% 2%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: rgb(29, 28, 28);
+    color: white;
+       
+    
+}
+
+   parte1 a{
+    
+    padding: 5px 0; 
+    text-decoration: none;
+    background-image: linear-gradient(45deg, orangered, darkred);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: ease-in 0.5s;
+} 
+
+
+
+    .servicos_desc .parte2{
+
+        width:50%;
+        height:300px;
+        padding:2% 3%;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        background-image: linear-gradient(45deg, orangered, darkred);
+        color: white;
+           
+        
+    }
+    
+    .parte2 h2{
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 400;
+        color:whitesmoke;
+        margin-bottom: 20px;
+        
+    }
+    
+     .parte2 p{
+        font-size: 14px;
+        font-weight: normal;
+        font-style: italic;
+        color:whitesmoke;
+        
+    }
+    
+
+
+}
+
+
+@media screen and (max-width: 768px){
+	section.banner{
+		background-size: cover;
+		background-position:center;
+		height: 80vh;
+	}
+
+	nav.desktop
+	{
+		display: none;
+	}
+
+    .mmobile {
+        margin: 2% 2%;
+        display:block;
+       
+    }
+    
+    
+header nav .ahome{
+    
+    color:rgb(255, 230, 0);
+}
+
+    .mmobile ul {
+    
+        display:none;
+    }
+
+
+/*Vitrine de Carros --------------------------------------------------------------------------------------------*/
+.vitrine-destaque{
+    padding: 30px 2%;
+    margin-left: 10%;
+
+
+}
+
+
+.container-vitrine{
+    width: 100%;
+    flex-direction: column;
+  
+}
+
+.carro{
+    width: 90%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+}
+
+
+
+}
+
+/*Contato - Mobile 658 --------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 658px){
+
+    .w50{ width: 100%;
+    }
+
+    
+
+    footer nav{
+        margin-top: -30px;
+        width: 100%;
+        text-align: center;
+    
+    }
+    
+    footer p{
+
+        width: 100%;
+        text-align: center;
+    
+    }
+    
+
+}
+
+@media screen and (max-width: 580px){
+.text-banner{
+	padding:30px;
+}
+
+.text-banner-single{
+	
+    width: 200px; /* Largura do retângulo */
+    height: 50px;
+    font-size: 18px;
+}
+
+.text-banner{
+        margin-right: 5%;
+}  
+   
+
+
+.text-banner-single{
+
+    
+    margin-top: 10px;
+    margin-bottom:30px ;
+    
+    
+}
+footer p{
+
+    padding:0 15%;
+     text-align: center;
+ 
+ }
+
+
+}
