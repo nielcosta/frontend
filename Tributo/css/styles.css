@@ -1,0 +1,166 @@
+/* Iniciando a página */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica;
+    background-color: gray; /* Fundo cinza na página */
+}
+
+/* Container Principal */
+.header {
+    position: relative; /* Mantém o header sobre outros elementos */
+    z-index: 1; /* Mantém o header acima do vídeo */
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhor contraste */
+}
+
+
+/* Container do Vídeo */
+.video-container {
+    position: absolute; /* Mantém o vídeo fixo no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52.1vh;
+    z-index: 0; /* Mantém o vídeo acima do fundo, mas abaixo do conteúdo */
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25; /* Mantém o vídeo visível */
+}
+
+
+/* Título no Header */
+.header h2 {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: "PT Sans Narrow", sans-serif;
+    color: antiquewhite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.header img {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 2%;
+    width: 180px;
+    height: auto;
+}
+
+/* Foto Destaque */
+.feature-image img {
+    position: relative;
+    margin-top: -30px;
+    margin-left: 0;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    z-index: 2;
+}
+
+/* Container - Bibliografia */
+.feature-image figcaption {
+    margin-left: 30px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Texto - Sobre a Banda ------------------*/
+
+.Contexto  {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 0px;
+    text-align: justify;
+    padding : 60px 20px 20px 20px;
+    background-color: beige;
+
+}
+
+.negrito{
+ font-weight: bold; /* Deixa o texto em negrito */
+
+}
+
+.quotes-container{
+
+    text-align: justify;
+    padding: 20px 20px ;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    background-color: rgb(209, 209, 209);
+    margin-bottom: 80px;
+    
+
+}
+
+.quotes-container blockquote{
+    font-size: 22px;
+    font-family:'Great Vibes', cursive;;
+
+}
+
+.quotes-container p{
+    
+    margin-left: 35px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+
+.biograph-container{
+
+padding: 20px 40px;
+}
+
+.container-show {
+    position: relative; /* Mantém o vídeo fixo no topo */
+    margin: 40px auto;
+    width: 100%;
+    height: 52.1vh;
+    
+    
+}
+
+.container-show .show-posted{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 999; /* Mantém o vídeo acima do fundo, mas abaixo do conteúdo */
+    opacity: 1;
+
+    
+   
+}
+
+.curiosidades-container{
+
+    padding: 25px 0;
+    margin: 25px 0;
+    border-top: 1px dashed #5b5a5a;
+    border-bottom: 1px dashed #5b5a5a;;
+
+}
+
+.curiosidades-container li{
+
+    height: 30px;
+}
+
+
+
+
+
