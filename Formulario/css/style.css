@@ -1,0 +1,194 @@
+*{   margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif;}
+body{
+    background-color: rgb(220, 222, 222);
+}
+ 
+html,body{height:100%; }
+
+.clear{clear:both;}
+
+h1,h2,h3{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: #333;
+}
+
+.header h2{
+    position: relative;  
+    margin: 10px auto;
+    color: antiquewhite;
+}
+
+p,label{
+    color: rgb(95, 95, 96);
+}
+
+input{
+    border:none;
+    border-bottom:1px solid #333;
+    padding: 10px 0;
+    border-radius: 5px;
+    
+}
+
+input[type="text"],input[type="number"],input[type="date"],input[type="file"]{
+
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+/*--- Cabeçario ----------------------------------*/
+.header{
+    
+    height: 100%;
+    padding: 40px;
+    background-color: rgb(101, 4, 191);
+}
+
+.header img{
+    margin-top: 3px;
+    width:40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+/*--Formulario -------------------------------------------------*/
+
+.form-header{
+    border-bottom: 1px dashed #5b5a5a;
+    
+}
+
+.form-header p{
+    color:#673ab7;
+    border-bottom: 2px solid #673ab7;
+    width: 30%;
+    text-transform: uppercase;
+}
+/*--- Form Body -------------------------------------------------------------*/
+
+.form-body{
+    padding: 30px;
+    border-bottom: 1px dashed #5b5a5a;
+    background-color: rgb(101, 4, 191);
+    border-radius: 5px;
+    
+}
+
+.form-body h1{
+   text-align: left;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: antiquewhite;
+   
+}
+
+.form-body p{
+   text-align: left;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 14px;
+   color: antiquewhite;
+
+}
+
+.required-field{
+    color: rgb(206, 9, 9);
+}
+
+.container-form{
+
+    background-color: rgb(245, 247, 248);
+    width:80%;
+    padding: 30px 20px;
+    position: relative; 
+    margin : -0 auto;
+    border-radius: 10px;
+}
+.container-form p, .container-form h1 {
+    margin-bottom: 10px;
+}
+
+textarea{
+   
+    padding: 5px 130px;
+    text-align: left; 
+    resize: none;
+    padding: 10px; /* Ajuste de espaçamento interno */
+    width: 100%; /* Para ocupar toda a largura disponível */
+    height: 150px; /* Ajuste de altura */
+      
+    border: none; /* Remove todas as bordas */
+    border-bottom: 1px solid #5b5a5a; /* Adiciona a borda apenas na parte inferior */
+    font-family: inherit; /* Mantém a fonte consistente */
+    outline: none; /* Remove o contorno ao focar */
+}
+
+
+
+
+.box-input{
+
+    margin-top: 30px;
+    
+} 
+
+.block{
+
+    display: block;
+}
+
+.optional-box p{
+margin-bottom: 30px;
+
+
+
+}
+
+/*-Tipo de Câmbio ------------------------------------------------------------------------------*/
+
+.box-input input[type="radio"] {
+    margin-right: 10px; /* Espaço entre o rádio e o próximo elemento */
+    margin-bottom: 30px;
+    
+}
+
+.box-input label {
+    margin-right: 20px; /* Espaço entre os rótulos */
+    margin-bottom: 30px;
+    
+}
+
+/*-Lista de Opcioanis ------------------------------------------------------------------------------*/
+
+.optional-list {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: auto;
+    gap: 10px;
+    margin-left: 30px;
+    
+}
+
+.optional-list li {
+    width: 100%;
+    list-style: none;
+}
+
+
+textarea .block{
+    text-align: left;
+}
+
+.submit-button{
+
+    background-color: #673ab7;
+    color:antiquewhite;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.submit-button:hover {
+    background-color: #500dcc; /* Azul escuro ao passar o mouse */
+}
