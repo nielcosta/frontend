@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="description" content="Servidor de Redes">
+    <meta name="author" content="Daniel Mendes">
+    
+    <!-- Biblioteca de Ícones Externa -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    
+    <title>Next Work</title> <!-- Corrigido erro de fechamento da tag <title> -->
+
+</head>
+<body>
+    <div class="container"> <!-- Removido espaço extra dentro da classe -->
+        <div class="nav-bar-container"> <!-- Corrigido espaçamento dentro da tag div -->
+            <nav>
+                <a href="#"> <img src="/img/Logo.png" alt="Logo"></a> <!-- Adicionado texto alternativo na imagem -->
+                <ul class="navbar-itens">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Preços</a>
+                    </li>
+                    <li>
+                        <a href="#">Contato</a>
+                    </li>
+                    <li>
+                        <a href="#" class="default-btn">Entrar</a> <!-- Corrigido espaçamento na classe -->
+                    </li>
+                </ul>
+            </nav>
+            <!-- Conteudo Principal da Página.-->
+         <main>
+                <div class="main-banner">
+                    <a href="#">
+                        <img src="./img/conection.png" class="icone" alt="Conection Icon">
+                    </a>
+                    <h1>Nextwork</h1>
+                    <p>Serviços em Hospedagem</p>
+                    <p>e Domínios</p>
+                </div>
+
+                 <!-- Serviços-->
+
+                <section class="services-container">
+
+                    <ul>
+                        <li>
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Segurança</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                             Similique repellat, aut quibusdam dolores illo soluta voluptatum consequuntur, 
+                             illum vero, quisquam totam accusamus id molestias impedit ab nisi. Unde, 
+                             molliti.</p>
+
+                        </li>
+
+                         <li>
+                            <i class="fas fa-rocket"></i>
+                            <h3>Performance</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                             Similique repellat, aut quibusdam dolores illo soluta voluptatum consequuntur, 
+                             illum vero, quisquam totam accusamus id molestias impedit ab nisi. Unde, 
+                             molliti.</p>
+                             
+                        </li>
+
+                         <li>
+                            <i class="fas fa-comments"></i>
+                            <h3>Suporte Técnico</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                             Similique repellat, aut quibusdam dolores illo soluta voluptatum consequuntur, 
+                             illum vero, quisquam totam accusamus id molestias impedit ab nisi. Unde, 
+                             molliti.</p>
+                             
+                        </li>
+                    </ul>
+                </section>
+
+                 <!-- Planos e Preços-->
+
+                <section class="pricing-container">
+                    <h2>Planos e Preços</h2>
+                    <p>Selecione o plano que atende as suas necessidades</p>
+                    <div class="plans-container">
+                        <div class="plan">
+                            <ul>
+                                <li class="price">R$15/mês</li>
+                                <li class="plan-name">Básico</li>
+                                <li>2GB de espaço</li>
+                                <li>1 Subdomínios</li>
+                                <li>25 contas de e-mail</li>
+                                <li>C-panel</li>
+                                <li>Suporte 24/7</li>
+                                <li class="plan-btn">Saber mais</li>
+                            </ul>
+                        </div>
+                        <div class="plan">
+                            <ul>
+                                <li class="price">R$30/mês</li>
+                                <li class="plan-name">Dedicado</li>
+                                <li>5GB de espaço</li>
+                                <li>10 Subdomínios</li>
+                                <li>50 contas de e-mail</li>
+                                <li>C-panel</li>
+                                <li>Suporte 24/7</li>
+                                <li class="plan-btn">Saber mais</li>
+                            </ul>
+                        </div>
+                        <div class="plan">
+                            <ul>
+                                <li class="price recommended">R$50/mês</li>
+                                <li class="plan-name">Dedicado Plus</li>
+                                <li>10GB de espaço</li>
+                                <li>10 Subdomínios</li>
+                                <li>100 contas de e-mail</li>
+                                <li>C-panel</li>
+                                <li>Suporte 24/7</li>
+                                <li class="plan-btn recommended">Saber mais</li>
+                            </ul>
+                        </div>
+                        <div class="plan">
+                            <ul>
+                                <li class="price">R$100/mês</li>
+                                <li class="plan-name">Cloud</li>
+                                <li>20GB de espaço</li>
+                                <li>20 Subdomínios</li>
+                                <li>200 contas de e-mail</li>
+                                <li>C-panel</li>
+                                <li>Suporte 24/7</li>
+                                <li class="plan-btn">Saber mais</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="seacherdomain-cotainer">
+                    <h2>Qual domínio você quer para seu site ?</h2>
+                    <p>Verifique se o domínio está disponível: </p>
+                    <form action="">
+                        <input type="text" name="domain" id="domain"placeholder="Digite o domínio desejado."/>
+                        <input type="submit" value="Procurar Domínio"/>
+
+                    </form>
+                
+                </section>
+                <!-- Contact Container -->
+                <section class="contact-container">
+                    <h2>Mande uma mensagem</h2>
+                    <p>Envie a sua mensagem. Em até 4 horas um especialista entrará em contato com você ! </p>
+                    <form>
+                        <input type="name" id="name" placeholder="Digite seu nome"/>
+                        <input type="email" id="email" placeholder="Digite seu e-mail"/>
+                        <textarea name="message" id="message" placeholder="Descreva aqui o que você precisa ou o seu projeto.">
+                        </textarea>
+                        <input type="submit"value="Enviar">
+                    </form>
+                </section>
+
+          </main>
+        <!-- Rodapé da Página -->
+          <footer>
+
+            
+            <p>Todos direitos reservados a Nextwork @2025 </p>
+
+          </footer>
+        </div>
+    </div>
+</body>
+</html>

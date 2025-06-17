@@ -1,0 +1,597 @@
+/*Geral ----------------------------------------------- */
+
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+}
+
+
+
+
+
+
+h1,h2,h3 {
+
+    color:#257f80;
+}
+
+p{
+
+    color:#343536;
+}
+
+
+
+
+
+/*Nav-Bar ---------------------------------------------*/
+.nav-bar-container{
+
+    width: 100%;
+    height:120px;
+    background: linear-gradient(to right, #7ab950,#1277c2); 
+}
+
+/*Nav ---------------------------------------------*/
+
+nav{
+
+    position: relative;
+}
+
+
+
+/*Logo ----------------------------------------------- */
+.nav-bar-container img{
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px 10px 10px;
+    
+
+
+}
+
+/*Nav-Itens ---------------------------------------------*/
+.nav-bar-container .navbar-itens{
+    position:absolute;
+    right:0;
+    height:80px;
+    line-height:80px;
+    margin:0;
+    display: inline-block;
+
+
+}
+
+
+/*Itens de Navegação ---------------------------------------------*/
+
+.navbar-itens li{
+
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 25px;
+    margin-top:25px;
+    
+}
+
+.navbar-itens a{
+
+    color:beige;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.navbar-itens a:hover{
+
+    color:#7ab950;
+   
+
+}
+
+/*Botão Navegador ---------------------------------------------*/
+
+.default-btn{
+
+    padding: 15px 20px;
+    background-color: #343536;
+    border-radius:5px;
+     
+  
+}
+
+ .navbar-itens .default-btn:hover{
+
+   background-color: #7ab950;
+   color:#343536;
+     
+   
+}
+
+/*Main Banner ---------------------------------------------*/
+.main-banner{
+
+    background-image: url('../img/banner.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10rem 0;
+    
+}
+    
+.main-banner .icone { 
+    width: 24px;  
+    height: 24px;  
+    
+} 
+
+.main-banner h1{
+margin-top: -10px;
+color: beige;
+text-align: center;
+font-weight: bold;
+font-size: 32px;
+text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+.main-banner p{
+color: rgb(250, 250, 248);
+text-align: center;
+font-weight: bold;
+font-size: 16px;
+text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+/*Services -------------------------------------------*/
+
+.services-container{
+
+    padding: 5rem 0;
+
+}
+
+.services-container ul{
+
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.services-container li{
+
+    flex : 1 1 200px;
+    list-style: none;
+    text-align: center;
+    padding:20px;
+
+}
+
+.fas{
+
+    font-size: 60px;
+    margin-bottom: 15px;
+
+}
+
+.fa-shield-alt{
+
+    color: #7ab950;
+}
+
+.fa-rocket{
+        color: #343536;
+}
+
+.fa-comments{
+        color: #1277c2;
+}
+
+.services-container h3{
+
+    margin-bottom: 30px;
+}
+
+.services-container p{
+
+    line-height: 30px;
+    text-align: justify;
+}
+
+/*Preços e Planos -------------------------------------------*/
+
+.pricing-container{
+
+    padding-bottom: 5rem;
+    text-align: center;
+
+}
+
+.pricing-container h2{
+
+    font-size: 36px;
+        
+}
+
+.pricing-container p{
+
+    font-size: 20px;
+        
+}
+
+.plans-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 50px auto 0;
+}
+
+.plan {
+  flex: 1;
+  max-width: 275px;
+  margin: 0 20px;
+
+  background-color: #fff;
+  border-radius: 8px; /* Mantém as bordas arredondadas (se quiser elas mais nítidas como no desenho, pode ajustar para 0) */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 30px;
+
+
+}
+
+.plan:hover {
+    transform: translateY(-5px); /* Efeito de elevação sutil no hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra um pouco mais pronunciada no hover */
+}
+
+.plan ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; /* Remove padding padrão da UL */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Faz a UL ocupar a altura total do seu pai div.plan */
+}
+
+.plan .price {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1277c2;
+    /* margin-bottom: 15px; Removido, pois a borda já faz a separação visual */
+    padding: 15px 0;
+    width: 100%;
+    border-bottom: 2px solid black; /* CHAVE: Linha preta mais nítida abaixo do preço */
+    background-color: #f0f0f0; /* Fundo claro para a área do preço */
+    border-radius: 6px 6px 0 0; /* Ajusta o border-radius para combinar com o do .plan, mas só no topo */
+    position: relative; /* Pode ser útil para elementos internos, mas não estritamente necessário aqui */
+    z-index: 1; /* Garante que a borda do preço esteja acima da borda do .plan se houver sobreposição */
+}
+
+.plan .recomended {
+    background-color: #7ab950; /* Cor de destaque para o plano recomendado */
+    color: white; /* Texto branco para o plano recomendado */
+    /* box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.1); Removido para ter um visual mais limpo como no desenho */
+}
+
+.plan .plan-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #343536;
+    margin-top: 20px; /* Adiciona margem acima do nome do plano para separação da linha de preço */
+    margin-bottom: 20px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+}
+
+.plan ul li {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    padding: 0 20px; /* Adiciona padding horizontal aos itens */
+    text-align: center; /* Centraliza o texto das características */
+}
+
+.plan .plan-btn {
+    margin-top: auto; /* Empurra o botão para a parte inferior da coluna */
+    padding: 12px 25px;
+    background-color: #1277c2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    display: inline-block;
+}
+
+.plan .plan-btn:hover {
+    background-color: #0e5b95;
+}
+
+/* --- Ajustes Responsivos --- */
+@media (max-width: 1200px) {
+    .plans-container {
+        gap: 20px;
+    }
+    .plan {
+        flex: 1 1 calc(25% - 20px);
+    }
+}
+
+@media (max-width: 992px) {
+    .plans-container {
+        gap: 15px;
+    }
+    .plan {
+        flex: 1 1 calc(33.33% - 15px);
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .plans-container {
+        gap: 15px;
+    }
+    .plan {
+        flex: 1 1 calc(50% - 15px);
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 576px) {
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .plan {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+/* Search Domain -----------------------------*/
+
+.seacherdomain-cotainer{
+
+    background-color: #257f80;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.seacherdomain-cotainer h2{
+
+    color: beige;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.seacherdomain-cotainer p{
+
+    color: #d5d5d5;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.seacherdomain-cotainer input{
+
+    display: block;
+    border:none;
+    border-radius: 5px;
+    margin:0 auto;
+    
+}
+
+.seacherdomain-cotainer input[type="text"]{
+
+    width:60%;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.seacherdomain-cotainer input[type="submit"]{
+
+    background-color: #7ab950;;
+    padding: 15px 30px;
+    font-size: 20px;
+    color:beige;
+    font-size: 24px;
+    cursor:pointer;
+    opacity:.9;
+}
+
+.seacherdomain-cotainer input[type="submit"]:hover{
+    opacity:1;
+}
+
+/* Contact Form -----------------------------*/
+
+.contact-container{
+
+    text-align: center;
+    padding: 5rem 2rem 0;
+
+
+}
+
+.contact-container h2{
+
+    font-size: 36px;
+    margin-bottom: 15px;
+
+}
+
+.contact-container p{
+
+    font-size: 20px;
+    margin-bottom: 40px;
+
+    
+}
+
+.contact-container input, .contact-container textarea{
+
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    margin:0 10px 20px;
+
+}
+
+.contact-container textarea{
+
+    display: block;
+    margin:0 auto 20px;
+    width: 470px;
+    height: 150px;
+}
+
+.contact-container input[type="submit"]{
+
+    display: block;
+    margin:0 auto;
+    background-color: #1277c2;
+    color: beige;
+    cursor:pointer;
+    opacity:.9;
+} 
+
+.contact-container input[type="submit"]:hover{
+
+     opacity:1;
+} 
+
+/*Footer -------------------------------------*/
+
+footer{
+    margin-top: 20px;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px 0 100px;
+    background-color:#343536;
+    
+
+}
+
+footer p{
+
+    font-size: 16px;
+    color:beige;
+}
+
+/* Responsivo -----------------------------------------*/
+
+ /* Pequenos laptops a partir de 1100px -----------------------------------------*/   
+ @media (max-width:1100px) {
+
+    .plans-container{
+        width: 95%;
+    }
+    .plan{
+
+        margin:0 5px;
+    }
+    
+ }
+
+
+ /* Pequenos laptops a partir de 900px -----------------------------------------*/   
+@media (max-width: 900px) {
+  .main-banner p {
+    padding: 0 6rem;
+  }
+
+  .searchdomain-container {
+    padding: 2rem 4rem;
+  }
+}
+
+
+@media (max-width: 768px) { /* Para 2 colunas em telas de tablet pequenas */
+   .plans-container {
+  display:block;
+  justify-content:center;
+  width: 80%;
+  margin: 50px auto 0;
+}
+}
+
+
+
+
+
+/* celular 576px */
+@media (max-width: 576px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar-items li {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .main-banner p {
+    padding: 0 2rem;
+  }
+
+  .services-container ul {
+    flex-direction: column;
+  }
+
+  
+    .plans-container {
+        flex-direction: column; /* Empilha os planos verticalmente */
+        align-items: center; /* Centraliza quando empilhados */
+        gap: 20px; /* Espaçamento entre os planos empilhados */
+    }
+    .plan {
+        width: 90%; /* Faz os planos ocuparem quase toda a largura */
+        max-width: 400px; /* Limita a largura máxima para legibilidade */
+        /* margin-bottom: 20px; O gap já cuida disso quando flex-direction: column */
+    }
+}
+
+  .searchdomain-container h2 {
+    font-size: 28px;
+  }
+
+  .searchdomain-container input[type="text"] {
+    width: 100%;
+  }
+
+  .contact-container {
+    padding: 3rem 2rem;
+  }
+
+  .contact-container input,
+  .contact-container textarea {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
