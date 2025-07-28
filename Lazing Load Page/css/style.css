@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #333; /* Cor de fundo de fallback caso a imagem não carregue */
+    overflow-x: hidden; /* Evita scroll horizontal */
+    position: relative; /* Para o contêiner dos vagalumes e o pseudo-elemento */
+    min-height: 100vh; /* Garante que o body ocupe a altura da viewport */
+
+    /* --- Estilos para a imagem de fundo --- */
+    background-image: url('/img/folhas.png');
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+    /* ------------------------------------------- */
+}
+
+/* Pseudo-elemento para escurecer a imagem de fundo */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Preto com 50% de opacidade (ajuste aqui para mais ou menos escuro) */
+    z-index: -1; /* Coloca o overlay atrás do conteúdo, mas acima da imagem de fundo */
+}
+
+.title {
+    color: rgb(237, 235, 235);
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: #222;
+    position: relative; /* Garante que o título fique acima do overlay */
+    z-index: 1; /* Valor maior que -1 para ficar visível */
+}
+
+.container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Garante que o conteúdo fique acima do overlay */
+    z-index: 1; /* Valor maior que -1 para ficar visível */
+}
+
+.image-container {
+    border-bottom: solid 1px #6a6868;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.image-container img {
+    width: 70%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto 1rem;
+
+    opacity: 0;
+    /* Blur inicial será controlado pelo JS */
+    transition: opacity 0.7s ease-in, filter 0.2s ease-out;
+}
+
+.image-container img.loaded {
+    opacity: 1;
+}
+
+.image-container p {
+    text-align: center;
+    color: beige;
+    margin-bottom: 1rem;
+}
+
+.container-footer {
+    width: 100%;
+    height: 6rem;
+    padding: 1rem;
+    background-color: #222;
+    color: beige;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Importante para o z-index funcionar */
+    z-index: 10; /* Garante que o rodapé fique acima de todos os outros elementos */
+}
+
+/* --- Estilos para os Vagalumes --- */
+.fireflies-container {
+    position: fixed; /* Fixado na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite clicar através do contêiner */
+    z-index: 5; /* Fica acima do overlay de fundo (-1), mas abaixo do footer (10) */
+    overflow: hidden; /* Garante que os vagalumes não saiam do contêiner */
+}
+
+.firefly {
+    position: absolute;
+    width: 6px; /* Tamanho do vagalume */
+    height: 6px;
+    background-color: rgb(255, 255, 150); /* Cor amarelada/esbranquiçada */
+    border-radius: 50%;
+    box-shadow: 0 0 5px 2px rgba(255, 255, 150, 0.7); /* Efeito de brilho */
+    opacity: 0; /* Inicia invisível e o JS vai controlar */
+    transform: translate(-50%, -50%); /* Centraliza o vagalume no ponto do mouse */
+    transition: transform 0.1s ease-out, opacity 0.5s ease-in-out; /* Suaviza o movimento e o brilho */
+}
