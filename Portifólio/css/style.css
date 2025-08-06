@@ -1,0 +1,647 @@
+/* Estilo Geral */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+/* Definição das variáveis de cor */
+:root {
+    --primaria: #f0c400; /* Um amarelo para o primeiro ponto */
+    --secundaria: #fdd525; /* Outro tom de amarelo para o segundo ponto */
+    --maisEscuro: #000;    /* A cor de fundo principal */
+}
+
+/* O restante do seu código CSS */
+
+.particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.25;
+    background: 
+        radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+        var(--maisEscuro);
+}
+
+
+
+body {
+    background-color: black;
+    /* A altura é importante, mas '100vh' pode causar problemas de rolagem em alguns navegadores. 
+       Considere 'min-height: 100vh' para permitir que o conteúdo extra empurre o body. */
+    min-height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.interface {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%; /* Adicionei um padding para evitar que o conteúdo grude nas bordas em telas menores */
+}
+
+
+
+/* O seletor '.interface .logo img' está correto, mas o seletor '.logo img' é mais direto se
+o elemento '.logo' for único dentro do '.interface'. */
+.logo img, footer img{
+    width: 8rem;
+    height: 8rem;
+}
+
+h2.titulo {
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2.titulo span,
+.txt-topo-site span {
+    color: yellow;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    padding: 1.5rem 0; /* Altere para um valor mais consistente com o resto do layout */
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 60px;
+}
+
+header nav a { /* Corrigido para ser mais específico e evitar conflitos */
+    color: rgb(88, 88, 88);
+    text-decoration: none;
+    transition: 0.3s; /* Transições mais curtas (0.3s) geralmente oferecem uma experiência melhor */
+}
+
+header nav a:hover {
+    color: yellow; /* Mudei para 'yellow' para manter a consistência de cores */
+    transform: scale(1.05);
+}
+
+/* O seletor abaixo estava duplicado e incorreto. 
+   O seletor correto para o hover do botão é: */
+.btn_contato button {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: yellow;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn_contato button:hover {
+    background-color: #f0c400; /* Usei uma cor amarela um pouco mais escura para o hover, que é uma prática comum. */
+    transform: scale(1.05);
+}
+
+/* Estilo do Topo do Site */
+.topo_site {
+    padding: 1.5rem 0; /* Alinhei o padding com o do header para consistência */
+}
+
+.topo_site .flex {
+    align-items: center;
+    gap: 40px;
+}
+
+.txt-topo-site {
+    color: white;
+    text-align: left;
+    text-align: justify;
+    margin: auto 0;
+    flex: 1; /* A propriedade flex-grow: 1 já faz com que ocupe o espaço. Não precisa do comentário. */
+}
+
+.txt-topo-site h1 {
+    font-size: 3rem;
+    line-height: 1.2; /* 'line-height: 40px' pode causar sobreposição em telas menores. O valor '1.2' é mais flexível. */
+}
+
+.txt-topo-site p {
+    font-size: 1.1rem;
+    color: white;
+    margin: 20px 0; /* Usei o 'shorthand' para margens */
+}
+
+.img-topo-site {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.img-topo-site img {
+    max-width: 100%;
+    height: auto;
+    /* Evite usar margens negativas. É melhor ajustar o layout com padding ou flexbox.
+       Removi o 'margin-top: -5%;' e o 'position: relative' para uma abordagem mais limpa. */
+    animation: imgflutuante 2s ease-in-out infinite alternate;
+}
+
+@keyframes imgflutuante {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(20px);
+    }
+}
+
+/* Especialidades */
+.especialidades {
+    padding: 2rem 0;
+    margin-bottom: 30px;
+}
+
+.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades-box { /* Simplifiquei o seletor para ser mais direto */
+    color: white;
+    padding: 2rem;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 16px #5b5b5b;
+}
+
+.especialidades-box i {
+    color: yellow;
+    font-size: 3rem;
+}
+
+.especialidades-box h3 {
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.especialidades-box p {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+}
+
+/* Estilo Sobre */
+/* O seletor 'sextion' estava com um erro de digitação. */
+.sobre {
+    padding: 40px 0;
+}
+
+.sobre img {
+    max-width: 400px; /* Usei max-width para ser responsivo */
+    height: auto;
+}
+
+.txt-sobre {
+    color: white;
+    display: block;
+    gap:60px;
+    margin: auto 4%;
+}
+
+.txt-sobre h2 {
+ 
+  text-align: justify;  
+  font-size: 40px;
+   
+}
+
+.txt-sobre h2 span{
+   display: block;
+   
+}
+
+
+.txt-sobre p {
+    font-size: 20px;
+    margin-bottom: 2.5rem;
+    text-align: justify; 
+    
+}
+
+.btn-social button{
+  width:50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f0c400;
+  margin-right: 1rem;
+  font-size: 20px;
+  transition-duration: 1s;
+}
+
+.btn-social button:hover{
+  transform: scale(1.2);
+  background-color: #fdd525;
+
+}
+
+/*MEU PORTFÓLIO --------------------------------------------------------------------*/
+.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px rgba(75, 74, 74, 0.47);
+}
+
+.portfolio .flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.icones {
+    margin-top: 2rem;
+     margin-bottom: 2rem;
+}
+
+.icones img{
+    width:5%;
+    transition: 1s;
+}
+
+.icones img:hover{
+   transform: scale(1.3);
+}
+
+.img-port {
+    width: 360px;
+    height: 225px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(124, 123, 123, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.img-port:hover {
+    transform: translateY(-10px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img-port:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    color: #f0f0f0;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.btn-detalhes{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: yellow; /* Usando a cor do seu tema */
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-detalhes:hover {
+    background-color: #f0c400; /* Um tom mais escuro para o hover */
+}
+
+/*ESTILO FORMULÁRIO DE CONTATO */
+
+.formulario{
+    padding: 80px 4%;
+
+}
+form{
+    max-width: 500px;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px;
+}
+
+form input, textarea{
+    width:100%;
+    background-color: #242424;
+    border:none;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form input::placeholder, textarea::placeholder{
+    color:rgb(214, 214, 211);
+}
+
+textarea{
+    resize: none;
+    max-height: 300px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input[type=submit]{
+    max-width: 200px;
+    background-color: yellow; /* Usando a cor do seu tema */
+    color: #000;
+    font-weight: bold;
+    transition: 1s ease;
+}
+
+form .btn-enviar input[type=submit]:hover {
+    transform: scale(1.1);
+    background-color: #f0c400; /* Um tom mais escuro para o hover */
+}
+
+/*Estilo do Rodapé ---------------------------------------------------*/
+
+
+
+footer{
+
+    padding:40px 4%;
+    box-shadow: 0 0 40px 10px rgba(75, 74, 74, 0.47);
+}
+
+footer .flex{
+
+   justify-content: space-between;
+}
+
+.line-footer{
+    padding: 20px 0;
+    
+}
+
+.borda{
+    border-top: solid 1px yellow;
+}
+
+footer .line-footer p i{
+    color:yellow;
+    font-size: 22px;
+}
+
+footer .line-footer a{
+   text-decoration: none;
+   color: beige;
+}
+
+/* Estilos para o Menu Mobile */
+.btn-abrir-menu {
+    display: none;
+    color: yellow;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s;
+}
+
+.menu-mobile.abrir-menu {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-mobile.abrir-menu .btn-fechar i {
+    color: yellow;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px;
+}
+
+.menu-mobile .btn-fechar i {
+    color: yellow;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.menu-mobile nav ul {
+    text-align: center;
+}
+
+.menu-mobile nav ul li a {
+    color: white;
+    font-size: 2rem;
+    padding: 20px 40px;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #242424;
+}
+
+
+
+/* ---------------------------------------------------- */
+/*FUNCIONALIDADE DO MENU
+/* ---------------------------------------------------- */
+
+/* Estilos para o Menu Mobile */
+.btn-abrir-menu {
+    display: none;
+    color: yellow;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0; /* Mudei para 'right: 0' para alinhar à direita */
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none; /* Impede cliques quando o menu está oculto */
+    transition: .2s;
+}
+
+.menu-mobile.abrir-menu {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px;
+    text-align: right;
+}
+
+.menu-mobile .btn-fechar i {
+    color: yellow;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.menu-mobile nav ul {
+    text-align: center;
+}
+
+.menu-mobile nav ul li a {
+    color: white;
+    font-size: 2rem;
+    padding: 20px 40px;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #242424;
+}
+
+
+/* ---------------------------------------------------- */
+/* MEDIA QUERIES */
+/* ---------------------------------------------------- */
+
+@media screen and (max-width: 1020px) {
+
+    /* Classes gerais para mobile */
+    .flex {
+        flex-direction: column;
+    }
+
+    .interface {
+        padding: 0 4%;
+    }
+
+    .btn-abrir-menu {
+        display: block;
+    }
+
+    /* Estilos do cabeçalho */
+    header .menu-desktop, .btn_contato {
+        display: none;
+    }
+
+    /* Estilos da seção Topo do Site */
+    .topo_site .flex {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .topo_site .interface {
+        padding-top: 100px;
+    }
+
+    .topo_site .img-topo-site {
+        margin-bottom: 30px;
+    }
+
+    .txt-topo-site h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Estilos da seção Especialidades */
+    .especialidades .flex {
+        flex-direction: column;
+    }
+
+    /* Estilos da seção Sobre */
+    .sobre .flex {
+        flex-direction: column;
+    }
+
+    .sobre .txt-sobre h2 {
+        text-align: center;
+    }
+
+    .txt-sobre .btn-social{
+       margin: 0% 20%;
+    }
+
+    /* Estilos do Portfólio */
+    .icones .flex {
+        flex-direction: row; /* Faz com que os itens fiquem lado a lado */
+        justify-content: center; /* Centraliza os ícones na linha */
+        gap: 20px; /* Adiciona espaçamento entre os ícones */
+    }
+
+    .icones img {
+        width: 15%; /* Mantém o tamanho dos ícones */
+    }
+
+    .portfolio .flex{
+        margin:0 6%;
+    }
+
+    /* Estilos do Formulário */
+    .formulario .titulo {
+        font-size: 2rem;
+    }
+
+    /* Estilos do Rodapé */
+    footer .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .borda p{
+        text-align: center;
+    }
+}
